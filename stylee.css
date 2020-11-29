@@ -1,0 +1,504 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: PopLight;
+  src: url("./fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: PopRegular;
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+
+body {
+  font-family: PopLight;
+}
+
+.portofolio {
+  color: white;
+  background: radial-gradient(rgba(59, 49, 40, 1), rgb(0, 0, 0));
+}
+
+nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.page {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+.coffee,
+.fashion {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero {
+  overflow: hidden;
+  height: 500px;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+}
+
+.hero img {
+  height: 500px;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+}
+.hero a {
+  display: flex;
+}
+
+.pic-right {
+  transform: translate(0%, 10%);
+}
+.pic-left {
+  transform: translate(0%, -10%);
+}
+
+.hero:hover .pic-right {
+  transform: translate(0%, 0%);
+}
+.hero:hover .pic-left {
+  transform: translate(0%, 0%);
+}
+
+.details {
+  grid-column: 2/3;
+  align-self: end;
+}
+
+.details h1 {
+  font-size: 64px;
+  font-family: PopRegular;
+}
+.details h2 {
+  font-size: 42px;
+  padding: 20px 0px;
+}
+.details p {
+  font-size: 24px;
+  padding: 20px 0px 50px 0px;
+}
+
+.pages {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pages > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pages h3 {
+  font-size: 24px;
+  padding: 30px;
+}
+
+.pages svg {
+  cursor: pointer;
+  opacity: 0.5;
+  transform: scale(2);
+}
+.pages svg:hover {
+  animation: dot 0.5s ease-in-out infinite alternate;
+}
+
+.pages svg.active {
+  opacity: 1;
+}
+
+@keyframes dot {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(4);
+  }
+}
+.banner {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+}
+.banner img {
+  height: 100%;
+  width: 90%;
+  object-fit: cover;
+  object-position: top;
+  margin-left: 10%;
+  margin-top: 3%;
+  transform: translate(-5%);
+}
+.Philtrelogo {
+  width: 100%;
+  position: relative;
+}
+
+.Philtrelogo img {
+  width: 8%;
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-top: 6%;
+}
+.noteimg {
+  width: 100%;
+  position: relative;
+}
+.noteimg img {
+  width: 40%;
+  margin-left: 47%;
+  margin-top: 3%;
+}
+.about {
+  position: relative;
+  width: 100%;
+}
+.about h1 {
+  width: 50%;
+  margin-left: 46%;
+  margin-top: 3%;
+  font-size: 50px;
+}
+
+.about p {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 1%;
+  text-align: center;
+  font-size: 18px;
+}
+.card {
+  position: relative;
+  width: 100%;
+}
+.card img {
+  display: flex;
+  width: 70%;
+  margin-left: 30%;
+  margin-top: 3%;
+  transform: translate(-20%);
+}
+.pack {
+  position: relative;
+  width: 100%;
+}
+.pack img {
+  display: flex;
+  width: 70%;
+  margin-left: 30%;
+  transform: translate(-20%);
+}
+.cafe {
+  position: relative;
+  width: 100%;
+}
+.cafe img {
+  display: flex;
+  width: 70%;
+  margin-left: 30%;
+  transform: translate(-20%);
+}
+.card2 {
+  position: relative;
+  width: 100%;
+}
+.card2 img {
+  display: flex;
+  width: 70%;
+  margin-left: 30%;
+  transform: translate(-20%);
+}
+
+.pattern {
+  position: relative;
+  width: 100%;
+}
+.pattern img {
+  display: flex;
+  width: 70%;
+  margin-left: 30%;
+  transform: translate(-20%);
+}
+.cup {
+  position: relative;
+  width: 100%;
+}
+.cup img {
+  display: flex;
+  width: 70%;
+  margin-left: 30%;
+  transform: translate(-20%);
+}
+.board {
+  position: relative;
+  width: 100%;
+}
+.board img {
+  display: flex;
+  width: 70%;
+  margin-left: 30%;
+  transform: translate(-20%);
+}
+
+@media (max-width: 1024px) {
+  .page {
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+  }
+  .hero {
+    grid-column: 2/3;
+    height: auto;
+  }
+  .hero img {
+    height: 500px;
+  }
+  .details {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    text-align: center;
+  }
+  .details h1 {
+    font-size: 48px;
+  }
+  .details h2 {
+    font-size: 38px;
+  }
+  .story,
+  .my-work {
+    flex-direction: column;
+  }
+  .story-description,
+  .work-description {
+    width: 100%;
+  }
+  .work-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .profile {
+    padding-top: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero img {
+    height: 400px;
+  }
+  .details h1 {
+    font-size: 38px;
+  }
+  .details h2 {
+    font-size: 28px;
+  }
+}
+
+.nav-open {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50vh;
+  background: white;
+  z-index: 1;
+  color: black;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-100%);
+  opacity: 0.4;
+}
+
+.contact {
+  grid-column: 2/3;
+}
+.nav-open h3 {
+  font-size: 28px;
+  padding-bottom: 40px;
+}
+.nav-open p {
+  font-size: 18px;
+}
+.social-links img {
+  padding: 0px 20px;
+}
+
+.logo,
+.menu {
+  z-index: 2;
+}
+.menu {
+  cursor: pointer;
+}
+
+#videogirl {
+  width: 100%;
+  margin-top: 1%;
+  height: 90vh;
+}
+
+.zacard {
+  width: 100%;
+  position: relative;
+}
+.zacard img {
+  margin-top: 5%;
+  width: 70%;
+  margin-left: 15%;
+}
+.zacont {
+  width: 100%;
+  position: relative;
+}
+.zacont img {
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+}
+.main {
+  width: 100%;
+  position: relative;
+}
+.main img {
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+}
+.zavisit {
+  width: 100%;
+  position: relative;
+}
+.zavisit img {
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.tag {
+  width: 100%;
+  position: relative;
+}
+.tag img {
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+}
+.bag {
+  width: 100%;
+  position: relative;
+}
+.bag img {
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+}
+.room {
+  width: 100%;
+  position: relative;
+}
+.room img {
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+}
+.aboutme {
+  width: 100%;
+  position: relative;
+}
+.aboutme img {
+  margin-top: 3%;
+  width: 25%;
+  margin-left: 20%;
+}
+.aboutme2 {
+  position: absolute;
+  top: 20%;
+  width: 50%;
+  margin-left: 50%;
+}
+.aboutme2 h1 {
+  background-color: rgba(255, 189, 29, 0.8);
+  width: 30%;
+  padding: 5px;
+}
+.aboutme2 h3 {
+  padding: 35px 15px 15px 0px;
+}
+.aboutme2 p {
+  padding: 35px 15px 15px 0px;
+  width: 60%;
+  font-size: 20px;
+}
+.chart {
+  width: 100%;
+  position: relative;
+}
+.chart img {
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-top: 10%;
+}
+
+.part1 {
+  position: absolute;
+  margin-left: 15%;
+  margin-top: 18%;
+}
+.part1 h3 {
+  padding: 10px;
+}
+
+.part2 h3 {
+  padding: 10px;
+}
+.part1 li {
+  padding: 10px;
+  list-style: none;
+}
+.part2 {
+  position: absolute;
+  margin-left: 75%;
+  margin-top: -20%;
+}
+
+.part2 li {
+  padding: 10px;
+  list-style: none;
+}
+.pt {
+  text-align: center;
+  width: 25%;
+  background-color: rgba(255, 232, 179, 0.8);
+  position: absolute;
+  margin-left: 15%;
+  font-size: 15px;
+  margin-top: 7%;
+  padding: 80px;
+}
